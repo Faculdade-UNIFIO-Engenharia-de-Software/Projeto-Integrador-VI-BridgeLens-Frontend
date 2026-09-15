@@ -9,7 +9,7 @@ export default function NotFound() {
       {/* Conteúdo Central */}
       <div className="relative z-10 text-center space-y-6 max-w-md">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs text-slate-400 font-mono">
+        <div className="  inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs text-slate-400 font-mono">
           <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
           HTTP 404 • NOT FOUND ERROR
         </div>
