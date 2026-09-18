@@ -1,4 +1,4 @@
-import ButtonLink from "@/components/ButtonLink";
+import ButtonLink from "@/components/Buttons/ButtonLink";
 import LogoLayout from "../components/Logo";
 import Input from "@/components/Input";
 
@@ -26,16 +26,20 @@ export default function Home() {
 
           <div className="flex items-center gap-4 my-6 mb-8">
             <div className="h-px flex-1 bg-slate-300" />
-            <span className="text-xs uppercase tracking-wider font-jetbrains text-slate-500">OU CONTINUE CO E-MAIL CORPORATIVO</span>
+            <span className="text-xs uppercase tracking-wider font-jetbrains text-slate-500">OU CONTINUE COM E-MAIL CORPORATIVO</span>
           </div>
 
 
           <div id="inputs">
-            <Input/>
+            <Input Icon="left" icon={<img src="./icons/envelope-light.png"/>}type="text" />
+            <div className="text-black">
+
+            </div>
           </div>
           <div id="signup-box"></div>
         </div>
       </div>
+
     </div>
   );
 }
