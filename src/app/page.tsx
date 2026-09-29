@@ -9,12 +9,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BadgeCheck, BotMessageSquare, ShieldCheck } from "lucide-react";
 
 // ========= costume imports ============
-import { GitHubBrand, GoogleBrand } from "@/components/externalBrand/logosBrand";
-import LoginForm from "@/components/forms/loginForms/LoginForms";
-import RegisterForm from "@/components/forms/registerForms/registerForm";
+import { GitHubBrand, GoogleBrand } from "@/components/externalBrand/LogoBrands"
 import EnfLogo from "@/components/logos/EnfLogo";
 import LogoLayout from "../components/logos/Logo";
-
+import SignInPage from "./auth/sign-in/page";
+import Link from "next/link";
+import { Separator } from "@/components/ui/separator";
+import SignUpPage from "./auth/sign-up/page";
+import TermsOfService from "../components/legal/TermsOfServices";
+import PrivacyPolicies from "../components/legal/PrivacyPolicies";
+ 
 // ========= others imports ============
 
 
@@ -90,8 +94,16 @@ export default function Home() {
                 </span>
               </div>
               <div id="inputs" className="flex flex-col w-full my-3 h-full">
-                <LoginForm/>
+                <SignInPage />
               </div>
+              <div className="flex w-full justify-evenly items-center">
+                <Link href="auth/recovery" className="text-xs font-medium text-muted-foreground hover:underline hover:text-primary px-1 text-nowrap">
+                  Esqueceu sua Senha?
+                </Link>
+                <TermsOfService/>
+                <PrivacyPolicies/>
+              </div>
+              
             </TabsContent>
 
             
@@ -106,7 +118,7 @@ export default function Home() {
                   </p> 
                 </div>
                 <div id="inputs" className="flex flex-col flex-1 w-full my-3 h-full">
-                  <RegisterForm/>
+                  <SignUpPage/>
                 </div>
                 
                 
@@ -114,13 +126,7 @@ export default function Home() {
             </TabsContent>
           </Tabs>
 
-          <div id="buttons sso" className="flex justify-evenly mb-8"></div>
-
-          <div id="inputs" >
-            <div className="text-black"></div>
-          </div>
-          <div id="signup-box"></div>
-        </div>
+      </div>
       </div>
     </div>
   );

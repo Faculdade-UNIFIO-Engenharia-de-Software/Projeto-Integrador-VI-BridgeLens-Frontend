@@ -1,6 +1,15 @@
-export default function LogoLayout() {
+  type variantLogo = {
+    left: "items-start",
+    center: "items-center",
+    right:"items-right"
+  }
+
+export default function LogoLayout({className, variantLogo="left", ...props}:any) {
+
+
+
   return (
-    <div className="flex flex-col gap-2 items-center ">
+    <div className={`"flex flex-col gap-2 ${variantLogo}, ${className}"`}>
       <img className="h-14 w-auto" src="./logo-icon-nav.png" alt="" />
       <h1 className="text-5xl font-extrabold">
         Mesh<span className="text-[#3EE1B7]">IA</span>
@@ -11,3 +20,4 @@ export default function LogoLayout() {
     </div>
   );
 }
+
